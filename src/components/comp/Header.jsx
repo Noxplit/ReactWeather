@@ -3,7 +3,7 @@ import AppContext from '../Context/AppContext'
 import Select from 'react-select'
 
 const Header = () => {
-	const {setValue } = useContext(AppContext)
+	const {setValue, value } = useContext(AppContext)
 
 	const options = [
 		{ value: { lat: 53, lon: 26 }, label: 'Барановичи' },
@@ -16,19 +16,20 @@ const Header = () => {
 		setValue(obj.value)
 	}
 
+  console.log(value);
+
 	return (
-		<div className='flex justify-between'>
+		<div className='flex justify-between flex-wrap'>
+      
 			<div className='flex'>
 				<img className='bg-black' src='/img/harness-icon.svg' alt='' width={40} />
 				<div className='text-4xl font-bold ml-10'>Noxplit Weather</div>
+
+
 			</div>
-			
-				<Select
-        defaultValue={{label: 'Барановичи' }}
-					onChange={onChange}
-					className=' text-black rounded-2xl text-3xl  text-center'
-					options={options}
-				/>
+
+      <Select defaultValue={{label: 'Барановичи'}}  onChange={onChange} className='text-black select select' options={options}/>
+				
 		</div>
 	)
 }
