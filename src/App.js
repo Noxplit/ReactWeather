@@ -43,7 +43,8 @@ function addDays(obj) {
   useEffect(() => {
   
  
-    axiosRequest(value)
+    //axiosRequest(value)
+    setWeek(data)
   }, [value])
 
 
