@@ -13,11 +13,11 @@ const  BlockRight = () => {
   return (
 <div>
   {onClickDay ? 
-    <div className='blockRight pl-10 '>
+    <div className='blockRight '>
 
 <div className='flex'>
 <img src="/img/temperature-svgrepo-com.svg" alt="" width={60}className='mt-8'  />
-<span >{mat(app_max_temp)} C° - ощущается как {mat(app_max_temp - 1)}C°</span>
+<span className='pl-10' >{mat(app_max_temp)} C° - ощущается как {mat(app_max_temp - 1)}C°</span>
 </div>
 
 <div className='flex'>
@@ -32,7 +32,7 @@ const  BlockRight = () => {
 
 <div className='flex'>
 <img src="/img/wind-svgrepo-com.svg" alt="" width={60}className='mt-8' />
-<span> {wind_spd} м/с {wind_cdir_full} </span>
+<span className='ml-10'> {wind_spd} м/с {wind_cdir_full} </span>
 </div>
 </div> :
     <div className='blockRight pl-10 '>
