@@ -10,19 +10,19 @@ const BlockLeft = () => {
   return (
 
     <div>
-      {onClickDay ? <div className='blockLeft'>
-      <div className=' text-7xl pt-5'>{mat(app_max_temp)}°C</div>
-      <img className='mx-auto pt-5' src={`/img/amcharts_weather_icons_1.0.0/animated/${icons}.svg`} width={100} alt="" />
-      <div className='text-2xl pt-5'>Дата: {datetime}</div>
-      <div className='text-2xl pt-5'>Время: {date.getHours()}:{date.getMinutes()}</div>
-      <div className='text-2xl pt-5'>Город: {week.city_name} </div>
+      {onClickDay ? <div className='blockLeft lg:text-4xl md:text-4xl sm:text-3xl text-2xl    flext flex-col items-center justify-center'>
+      <div className='text-7xl pb-2' >{mat(app_max_temp)}°C</div>
+      <img className='mx-auto'  src={`/img/amcharts_weather_icons_1.0.0/animated/${icons}.svg`} width={100} alt="" />
+      <div className='pb-2'>Дата: {datetime}</div>
+      <div className='pb-2' >Время: {date.getHours()}:{date.getMinutes()}</div>
+      <div >Город: {week.city_name} </div>
     </div> : 
-    <div className='blockLeft'>
-    <div className=' text-7xl pt-5'>{mat(firstDay?.app_max_temp)}°C</div>
-    <img className='mx-auto pt-5' src={`/img/amcharts_weather_icons_1.0.0/animated/${firstDay?.weather?.icon}.svg`} width={100} alt="" />
-    <div className='text-2xl pt-5'>Дата: {firstDay?.datetime}</div>
-    <div className='text-2xl pt-5'>Время: {date.getHours()}:{date.getMinutes()}</div>
-    <div className='text-2xl pt-5'>Город: {week.city_name} </div>
+    <div className='blockLeft lg:text-4xl md:text-4xl sm:text-3xl text-xl    flext flex-col items-center justify-center'>
+    <div className=' text-7xl pb-2'>{mat(firstDay?.app_max_temp)}°C</div>
+    <img className='mx-auto' src={`/img/amcharts_weather_icons_1.0.0/animated/${firstDay?.weather?.icon}.svg`} width={100} alt="" />
+    <div className='pb-2'>Дата: {firstDay?.datetime}</div>
+    <div className='pb-2'>Время: {date.getHours()}:{date.getMinutes()}</div>
+    <div >Город: {week.city_name} </div>
   </div>}
     </div>
     

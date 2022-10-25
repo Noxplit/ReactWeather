@@ -19,17 +19,17 @@ const Header = () => {
   console.log(value);
 
 	return (
-		<div className='flex justify-between flex-wrap'>
+		<div className='flex md:justify-between justify-center flex-wrap items-center'>
       
-			<div className='flex'>
-				<img className='bg-black' src='/img/harness-icon.svg' alt='' width={40} />
-				<div className='text-4xl font-bold ml-10'>Noxplit Weather</div>
+			<div className='flex' >
+				<img src='/img/harness-icon.svg' alt='' width={40} />
+				<div className='text-4xl font-bold '>Noxplit Weather</div>
 
 
 			</div>
-
-      <Select defaultValue={{label: 'Барановичи'}}  onChange={onChange} className='text-black select select' options={options}/>
-				
+<div>
+      {/* <Select defaultValue={{label: 'Барановичи'}}  onChange={onChange} className='text-black' options={options}/> */}
+			</div>	
 		</div>
 	)
 }

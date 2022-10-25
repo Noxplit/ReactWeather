@@ -9,36 +9,45 @@ const  BlockRight = () => {
   const discr = weather?.description
   const icons = weather?.icon
 
+  const styleBlockRight = {
+item: 'flex justify-center items-center'
+  }
+
 
   return (
 <div>
   {onClickDay ? 
-    <div className='blockRight '>
+    <div className='blockRigh flex flex-col justify-center  sm:pt-0 my-10 '>
 
-<div className='flex'>
-<img src="/img/temperature-svgrepo-com.svg" alt="" width={60}className='mt-8'  />
-<span className='pl-10' >{mat(app_max_temp)} C° - ощущается как {mat(app_max_temp - 1)}C°</span>
+
+<div className={styleBlockRight.item}>
+<img src="/img/temperature-svgrepo-com.svg" alt="" width={50} height={50}  />
+<span  >{mat(app_max_temp)} C° - ощущается как {mat(app_max_temp - 1)}C°</span>
 </div>
 
-<div className='flex'>
-<img src="/img/water-svgrepo-com.svg" alt="" width={60} className='mt-8'  />
-<span>{mat(pres)} мм ртутного столба - нормальное</span>
+<div className={styleBlockRight.item}>
+<img src="/img/water-svgrepo-com.svg" alt="" width={50} height={50}   />
+<span>{mat(pres)} мм ртутного столба</span>
 </div>
 
-<div className='flex'>
-<img src={`/img/amcharts_weather_icons_1.0.0/animated/${icons}.svg`} alt="" width={80}className='mt-8'  />
+<div className={styleBlockRight.item}>
+<img src="/img/wind-svgrepo-com.svg" alt="" width={50} height={50}/>
+<span > {wind_spd} м/с {wind_cdir_full} </span>
+</div>
+
+<div className={styleBlockRight.item}>
+<img src={`/img/amcharts_weather_icons_1.0.0/animated/${icons}.svg`} alt="" width={70} height={40}  />
 <span>{discr}</span>
+
 </div>
 
-<div className='flex'>
-<img src="/img/wind-svgrepo-com.svg" alt="" width={60}className='mt-8' />
-<span className='ml-10'> {wind_spd} м/с {wind_cdir_full} </span>
 </div>
-</div> :
-    <div className='blockRight pl-10 '>
+
+:
+    <div className='blockRight sm:pt-0 pt-20 '>
 
     <div className='flex'>
-    <img src="/img/temperature-svgrepo-com.svg" alt="" width={60}className='mt-8'  />
+    <img src="/img/temperature-svgrepo-com.svg" alt="" width={60}/>
     <span >{mat(firstDay?.app_max_temp)} C° - ощущается как {mat(firstDay?.app_max_temp - 1)}C°</span>
     </div>
     

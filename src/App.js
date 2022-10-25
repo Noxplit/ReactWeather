@@ -1,9 +1,7 @@
-import './App.css';
 import Home from './components/pages/Home';
 import React, { useEffect } from 'react';
 import AppContext from './components/Context/AppContext';
 import axios from 'axios';
-import data from './components/data/data16Days.json'
 
 function App() {
 

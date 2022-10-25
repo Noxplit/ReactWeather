@@ -5,7 +5,7 @@ import Weather from '../comp/Weather/Weather'
 
 const Home = () => {
   return (
-    <div className='wrapper rounded-2xl p-5'>
+    <div className='wrapper p-10'>
       <Header/>
       <Weather/>
       <WeatherDays/>
