@@ -22,17 +22,17 @@ item: 'flex justify-center items-center'
 
 <div className={styleBlockRight.item}>
 <img src="/img/temperature-svgrepo-com.svg" alt="" width={50} height={50}  />
-<span  >{mat(app_max_temp)} C° - ощущается как {mat(app_max_temp - 1)}C°</span>
+<span  >{mat(app_max_temp)} C° - filling like {mat(app_max_temp - 1)}C°</span>
 </div>
 
 <div className={styleBlockRight.item}>
 <img src="/img/water-svgrepo-com.svg" alt="" width={50} height={50}   />
-<span>{mat(pres)} мм ртутного столба</span>
+<span>{mat(pres)} mm mercury column</span>
 </div>
 
 <div className={styleBlockRight.item}>
 <img src="/img/wind-svgrepo-com.svg" alt="" width={50} height={50}/>
-<span > {wind_spd} м/с {wind_cdir_full} </span>
+<span > {wind_spd} m/s {wind_cdir_full} </span>
 </div>
 
 <div className={styleBlockRight.item}>
@@ -44,26 +44,26 @@ item: 'flex justify-center items-center'
 </div>
 
 :
-    <div className='blockRight sm:pt-0 pt-20 '>
+    <div className='blockRight flex flex-col justify-center  sm:pt-0 my-10 '>
 
-    <div className='flex'>
-    <img src="/img/temperature-svgrepo-com.svg" alt="" width={60}/>
-    <span >{mat(firstDay?.app_max_temp)} C° - ощущается как {mat(firstDay?.app_max_temp - 1)}C°</span>
+    <div className={styleBlockRight.item}>
+    <img src="/img/temperature-svgrepo-com.svg" alt="" width={50} height={50}/>
+    <span >{mat(firstDay?.app_max_temp)} C° - filling like {mat(firstDay?.app_max_temp - 1)}C°</span>
     </div>
     
-    <div className='flex'>
-    <img src="/img/water-svgrepo-com.svg" alt="" width={60} className='mt-8'  />
-    <span>{mat(firstDay?.pres)} мм ртутного столба - нормальное</span>
+    <div className={styleBlockRight.item}>
+    <img src="/img/water-svgrepo-com.svg" alt="" width={50} height={50}   />
+    <span>{mat(firstDay?.pres)} mm mercury column</span>
     </div>
     
-    <div className='flex'>
-    <img src={`/img/amcharts_weather_icons_1.0.0/animated/${firstDay?.weather?.icon}.svg`} alt="fdfs" width={80}className='mt-8'  />
+    <div className={styleBlockRight.item}>
+    <img src={`/img/amcharts_weather_icons_1.0.0/animated/${firstDay?.weather?.icon}.svg`} alt="fdfs" width={50} height={50}  />
     <span>{firstDay?.weather?.description}</span>
     </div>
     
-    <div className='flex'>
-    <img src="/img/wind-svgrepo-com.svg" alt="" width={60}className='mt-8' />
-    <span> {firstDay?.wind_spd} м/с {firstDay?.wind_cdir_full} </span>
+    <div className={styleBlockRight.item}>
+    <img src="/img/wind-svgrepo-com.svg" alt=""  width={50} height={50} />
+    <span> {firstDay?.wind_spd} m/s {firstDay?.wind_cdir_full} </span>
     </div>
     </div>
  }

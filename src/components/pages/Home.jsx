@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../comp/Header'
 import WeatherDays from '../comp/Weather/Days/WeatherDays'
 import Weather from '../comp/Weather/Weather'
+import Footer from '../comp/Weather/Footer'
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Header/>
       <Weather/>
       <WeatherDays/>
+      <Footer/>
     </div>
   )
 }

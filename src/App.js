@@ -9,7 +9,7 @@ function App() {
     const options = {
       method: 'GET',
       url: 'https://weatherbit-v1-mashape.p.rapidapi.com/forecast/daily',
-      params: {lat:`${obj.lat}`, lon:`${obj.lon}`, units: 'metric', lang: 'ru'},
+      params: {lat:`${obj.lat}`, lon:`${obj.lon}`, units: 'metric', lang: 'eng'},
       headers: {
         'X-RapidAPI-Key': 'e4b4977b58mshe9373b5c1bddf23p1591b0jsnc180c829cc0e',
         'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
